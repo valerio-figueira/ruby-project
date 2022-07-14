@@ -1,0 +1,139 @@
+@charset "UTF-8";
+
+:root{
+    --prime-color: #c42242;
+    --second-color: #f1395d;
+    --third-color: #414141;
+    --fourth-color: #e4bcbc;
+    --background-color: #ffffff;
+    --white-color: #ffffff;
+
+    --max-width: 950px;
+    --min-width: 360px;
+
+    --shadow: 0px 0px 5px 2px #0000005b;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: justify;
+    margin: auto;
+    background-color: var(--third-color);
+}
+
+header, footer{
+    background-color: var(--prime-color);
+    color: var(--white-color);
+}
+.flex{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: var(--max-width);
+    margin: auto;
+}
+header{
+    padding: 10px 0;
+    margin: auto;    
+}
+header h1{
+    transition: 0.4s;
+}
+header h1:hover{
+    transform: scale(1.13);
+}
+
+header, main, footer{
+    box-shadow: 0px 0px 5px 2px #0000005b;
+}
+.container{
+    width: var(--max-width);
+    margin: 1.5rem auto;    
+}
+
+.parallax{
+    background-image: url(https://images.pexels.com/photos/1887792/pexels-photo-1887792.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: top;
+}
+.container .parallax *{
+    color: white;
+    background-color: #000000d9;
+    padding: 15px;
+    border-radius: 5px;
+    width: 50%;
+}
+
+footer{
+    font-style: italic;
+    font-weight: bolder;
+    padding: 40px;
+    margin: auto;
+}
+footer p{
+    width: var(--max-width);
+    margin: auto;
+}
+
+.container{
+    display: grid;
+    grid-template-areas: "main-column side-column";
+    grid-template-columns: 1fr 300px;
+
+    padding: 1.5rem;
+    background-color: var(--background-color);
+}
+.main-column{
+    grid-area: main-column;
+}
+.side-column{
+    grid-area: side-column;
+}
+
+
+.box{
+    padding: 0.5rem 1rem;
+    margin: 20px 10px;
+    box-shadow: 0px 0px 5px 2px #00000063;
+    transition: 0.5s;
+}
+.box p{
+    text-indent: 25px;
+    padding: 0 0.5rem;
+}
+.box h2{
+    background-color: var(--prime-color);
+    color: var(--white-color);
+    padding: 5px;
+    box-shadow: 0px 0px 7px 1px #00000089;
+    transition: 0.5s;
+}
+.box h2:hover{
+    background-color: var(--second-color);
+}
+
+
+
+.navbar a{
+    color: var(--white-color);
+    text-decoration: none;
+    font-weight: bolder;
+    padding: 10px;
+    margin-left: -5px;
+    transition: 0.3s;
+}
+.navbar a:hover{
+    color: var(--prime-color);
+    background-color: var(--white-color);
+}
+
+
+@media screen and(max-width: 700px) {
+    
+}
