@@ -6,13 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ruby Project</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="script.js" defer></script>
 </head>
 <body>
-    <header>
+    <header id="top">
         <div class="flex">
             <h1 class="main-title">Ruby Project</h1>
             <nav class="navbar">
+                <a href="#" class="fa fa-bars icon"></a>
                 <a href="#">Home</a>
                 <a href="#">Link</a>
                 <a href="#">Link</a>
@@ -44,16 +46,39 @@
                 <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas tenetur maxime repellat cum accusamus ullam est harum, consequatur voluptates? Possimus consequuntur quisquam voluptatum deleniti id, qui quis harum quo mollitia. Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores deserunt enim, soluta sequi laborum qui praesentium tempore numquam repellendus! Sequi labore velit incidunt nisi obcaecati consequatur sunt numquam harum exercitationem.</p>
             </section>
             <section class="box">
-                <h2>Title</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda voluptas vel libero numquam temporibus molestiae dolorum labore repellendus iste! Alias ad minus soluta laboriosam, unde nostrum assumenda nam rem ducimus? Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium nobis aspernatur voluptate delectus repellendus voluptatibus commodi rerum asperiores mollitia. Doloribus sed non delectus assumenda, fugiat rerum deserunt molestias earum saepe?</p>
+                <h2>Sign in</h2>
+                <form action="">
+                    <fieldset>
+                        <legend>Sign in</legend>
+                        <div>
+                            Name <input type="text" placeholder="Your name...">
+                        </div>
+                        <div>
+                            Last Name <input type="text" placeholder="Your last name...">
+                        </div>
+                        <div>
+                            Birthyear <input type="date">
+                        </div>
+                        <div>
+                            E-mail
+                            <input type="email" placeholder="Your e-mail...">
+                        </div>
+                        <div>
+                            Password
+                            <input type="password" placeholder="Your password..." minlength="5" maxlength="16">
+                        </div>
+                        <button type="submit" class="sign-in">Submit</button>
+                    </fieldset>
+                </form>
             </section>
         </div>
     </main>
 
     <footer>
-        <p>
-            &copy; All rights reserved
-        </p>
+        <div class="flex-footer">
+            <p>&copy; All rights reserved</p>
+            <a class="scroll-top fa fa-sort-asc" href="#top"></a>
+        </div>
     </footer>
 </body>
 </html>
