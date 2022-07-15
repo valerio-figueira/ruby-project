@@ -6,16 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ruby Project</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="script.js" defer></script>
 </head>
 <body>
-    <header>
+    <header id="top">
         <div class="flex">
-            <h1 class="main-title">Ruby Project</h1>
+            <a href="./index.html" class="main-title">
+                <h1>Ruby Project</h1>
+            </a>
             <nav class="navbar">
-                <a href="#">Home</a>
-                <a href="#">Link</a>
-                <a href="#">Link</a>
+                <a class="fa fa-bars icon"></a>
+                <a href="./index.html" rel="_self">Home</a>
+                <a href="sign-in.html">Sign in</a>
+                <a href="sign-up.html">Sign up</a>
                 <a href="#">Contact</a>
             </nav>
         </div>
@@ -38,6 +42,7 @@
                 <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab iusto quis molestiae iure illum fugit nostrum velit, officiis blanditiis minus! Eligendi natus hic voluptatum maxime mollitia aperiam quidem odit soluta? Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque dolor qui quaerat labore perferendis laboriosam et pariatur nam illo, eaque obcaecati velit distinctio dignissimos incidunt esse, iure libero sequi error.</p>
             </section>
         </div>
+        
         <div class="side-column">
             <section class="box">
                 <h2>Title</h2>
@@ -45,15 +50,16 @@
             </section>
             <section class="box">
                 <h2>Title</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda voluptas vel libero numquam temporibus molestiae dolorum labore repellendus iste! Alias ad minus soluta laboriosam, unde nostrum assumenda nam rem ducimus? Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium nobis aspernatur voluptate delectus repellendus voluptatibus commodi rerum asperiores mollitia. Doloribus sed non delectus assumenda, fugiat rerum deserunt molestias earum saepe?</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores dicta ipsa ex esse! A quisquam unde ex nulla enim. Pariatur alias autem eos, animi iste vero mollitia praesentium ipsum expedita?</p>
             </section>
         </div>
     </main>
 
     <footer>
-        <p>
-            &copy; All rights reserved
-        </p>
+        <div class="flex-footer">
+            <p>&copy; All rights reserved</p>
+            <a class="scroll-top fa fa-sort-asc" href="#top"></a>
+        </div>
     </footer>
 </body>
 </html>

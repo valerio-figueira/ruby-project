@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ruby Project</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="login.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header id="top">
+        <div class="flex">
+            <a href="./index.html" class="main-title">
+                <h1>Ruby Project</h1>
+            </a>
+            <nav class="navbar">
+                <a href="#" class="fa fa-bars icon"></a>
+                <a href="index.html">Home</a>
+                <a href="sign-in.html">Sign in</a>
+                <a href="sign-up.html" class="active">Sign up</a>
+                <a href="#">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="main-column">
+            <section class="box">
+                <h2>Sign up</h2>
+                <form action="">
+                    <fieldset>
+                        <legend>Sign up</legend>
+                        <div>
+                            Name <input type="text" placeholder="Your name...">
+                        </div>
+                        <div>
+                            Last Name <input type="text" placeholder="Your last name...">
+                        </div>
+                        <div>
+                            Birthyear <input type="date">
+                        </div>
+                        <div>
+                            E-mail
+                            <input type="email" placeholder="Your e-mail...">
+                        </div>
+                        <div>
+                            Password
+                            <input type="password" placeholder="Your password..." minlength="5" maxlength="16">
+                        </div>
+                        <button type="submit" class="sign-in">Submit</button>
+                    </fieldset>
+                </form>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="flex-footer">
+            <p>&copy; All rights reserved</p>
+            <a class="scroll-top fa fa-sort-asc" href="#top"></a>
+        </div>
+    </footer>
+</body>
+</html>

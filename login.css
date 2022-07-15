@@ -1,0 +1,6 @@
+@charset "UTF-8";
+
+.container{
+    grid-template-columns: 1fr;
+    padding: 1.5rem 5rem;
+}

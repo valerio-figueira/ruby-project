@@ -5,6 +5,7 @@
     --second-color: #f1395d;
     --third-color: #414141;
     --fourth-color: #e4bcbc;
+    --fifth-color: #942239;
     --background-color: #ffffff;
     --white-color: #ffffff;
 
@@ -16,6 +17,10 @@
 
 *{
     box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
 }
 
 body{
@@ -36,9 +41,9 @@ header, footer{
     max-width: var(--max-width);
     min-width: var(--min-width);
     margin: auto;
+    padding: 0 20px;
 }
 header{
-    padding: 10px 0;
     margin: auto;    
 }
 header h1{
@@ -46,6 +51,10 @@ header h1{
 }
 header h1:hover{
     transform: scale(1.13);
+}
+header a{
+    text-decoration: none;
+    color: var(--white-color);
 }
 
 header, main, footer{
@@ -58,7 +67,7 @@ header, main, footer{
 }
 
 .parallax{
-    background-image: url(https://images.pexels.com/photos/1887792/pexels-photo-1887792.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2);
+    background-image: url();
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -72,17 +81,43 @@ header, main, footer{
     width: 50%;
 }
 
+
+
+.flex-footer{
+    max-width: var(--max-width);
+    min-width: var(--min-width);
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    margin: auto;
+}
 footer{
     font-style: italic;
     font-weight: bolder;
-    padding: 40px;
-    margin: auto;
+    padding: 40px 0;
 }
-footer p{
-    max-width: var(--max-width);
-    min-width: var(--min-width);
-    margin: auto;
+footer *{
+    padding: 0 20px;
 }
+.flex-footer .scroll-top{
+    font-size: 22px;
+    background-color: var(--fifth-color);
+    color: var(--white-color);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    padding: 15px 15px 10px;
+    transition: 0.5s
+}
+.flex-footer .scroll-top:hover{
+    background-color: var(--fourth-color);
+    color: var(--fifth-color);
+}
+
 
 .container{
     display: grid;
@@ -124,23 +159,112 @@ footer p{
 
 
 .navbar a{
+    float: left;
     color: var(--white-color);
     text-decoration: none;
     font-weight: bolder;
     padding: 10px;
-    margin-left: -5px;
     transition: 0.3s;
+    border-radius: 5px;
 }
 .navbar a:hover{
     color: var(--prime-color);
     background-color: var(--white-color);
 }
+.navbar .icon{
+    font-size: 18px;
+    display: none;
+}
+
+
+.active{
+    background-color: var(--fifth-color);
+    border-radius: 5px;
+}
+
 
 .box:hover{
-    box-shadow: 0px 0px 8px 2px #139bf0;
+    box-shadow: 0px 0px 8px 1px #139bf0;
+}
+
+form{
+    padding: 20px;
+}
+fieldset div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 8px;
+}
+fieldset div input{
+    margin: 5px;
+    padding: 7px;
+}
+fieldset div input:focus{
+    box-shadow: 0px 0px 6px 1px #07b6e291;
+    outline: none;
+    border: 2px solid #07b6e2;
+}
+.sign-in{
+    font-size: 18px;
+    font-weight: bolder;
+    display: block;
+    margin: 10px auto;
+    padding: 10px;
+    background-color: var(--prime-color);
+    color: var(--white-color);
+    border-radius: 5px;
+    border: none;
+    box-shadow: 0px 0px 5px 0px #00000085;
+    transition: 0.4s;
+    cursor: pointer;
+}
+.sign-in:hover{
+    background-color: var(--second-color);
+    box-shadow: 0px 0px 7px 1px #00000071;
 }
 
 
-@media screen and(max-width: 700px) {
-    
+
+@media screen and (max-width: 850px) {
+    .container{
+        grid-template-columns: 1fr 250px;
+    }
 }
+@media screen and (max-width: 750px) {
+    .container{
+        grid-template-areas: "main-column" "side-column";
+        grid-template-columns: 1fr;
+    }
+}
+
+@media screen and (max-width: 670px){
+    .flex{
+        flex-direction: column;
+    }
+    .navbar{
+        margin: 10px;
+    }
+    .navbar a{
+        display: none;
+        float: none;
+    }
+    .navbar .icon{
+        margin: 0;
+        font-size: 18px;
+        display: block;
+        cursor: pointer;
+    }
+    .navbar a:hover{
+        background-color: var(--fifth-color);
+        color: white;
+        border-radius: 5px;
+    }
+    .mobile a, .icon{
+        padding: 10px;
+        display: block;
+        text-align: center;
+    }
+}
+
