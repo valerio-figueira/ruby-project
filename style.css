@@ -142,7 +142,7 @@ footer *{
     transition: 0.5s;
 }
 .box p{
-    text-indent: 25px;
+    text-indent: 30px;
     padding: 0 0.5rem;
 }
 .box h2{
@@ -236,6 +236,10 @@ fieldset div input:focus{
     .container{
         grid-template-areas: "main-column" "side-column";
         grid-template-columns: 1fr;
+        transition: 0.5s;
+    }
+    .container *{
+        transition: 0.5s;
     }
 }
 
@@ -261,10 +265,42 @@ fieldset div input:focus{
         color: white;
         border-radius: 5px;
     }
-    .mobile a, .icon{
+    .mobile a{
         padding: 10px;
+        margin: 1px;
         display: block;
         text-align: center;
     }
 }
 
+@media screen and (max-width: 520px){
+    .container .parallax{
+        padding: 200px 0;
+        position: relative;
+    }
+    .container .parallax p{
+        width: 100%;
+        padding: 10px 20px;
+        margin: 0;
+        bottom: 0;
+
+        border-radius: initial;
+        position: absolute;
+    }
+    .container .parallax h2{
+        width: 100%;
+        border-radius: initial;
+        position: absolute;
+        top: 0;
+        margin: 0;
+    }
+    .container .img-resize{
+        padding: 250px 0;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .container{
+        padding: 0;
+    }
+}
